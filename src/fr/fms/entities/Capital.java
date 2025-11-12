@@ -11,7 +11,6 @@ public class Capital extends City{
 		
 	}
 	
-	
 	//--- getter and setter----
 	public String getMonument() {
 		return monument;
@@ -21,6 +20,14 @@ public class Capital extends City{
 		this.monument = monument;
 	}
 
+	// ----methods----
 	
+	@Override
+	public String toString() {
+		return  "Ville: " + this.cityName + "\n"+
+				"Pays: " + this .country + "\n" +
+				"Population: " + this.numberOfCitizen + " habitants\n" +
+				"Monument : " + this.monument + "\n";
+	}
 
 }
