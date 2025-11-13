@@ -4,11 +4,19 @@ public class TestCapital {
 
 	public static void main(String[] args) {
 		
+		// Test Capital
 		Capital paris = new Capital("France", "Paris", 2000000, "Tour Eiffel");
 		Capital londres = new Capital("Royaume-Uni", "Londres", 9000000, "BigBen");
 		
 		System.out.println(paris);
 		System.out.println(londres);
+		System.out.println("---------------------");
+		
+		Employee bill = new Employee("Bill", "Gates", 65, "Cupertino", new Capital("USA", "Washington", 7600000, "White-House"), "Microsoft", 1500000.0);
+		Employee elon = new Employee("Elon", "Musk", 12, "Palo alto", new City("Afrique du Sud", "Pretoria", 800000), "Tesla", 1500.00);
+		
+		System.out.println(bill);
+		System.out.println(elon);
 
 	}
 
