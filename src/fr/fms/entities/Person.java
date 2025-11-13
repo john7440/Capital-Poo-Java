@@ -117,7 +117,8 @@ public abstract class Person {
 	}
 	
 	/**
-     * Sets the person's age. If the age is negative, sets it to -1
+     * Sets the person's age
+     * If the age is negative, sets it to -1
      *
      * @param age the age to set
      */
@@ -132,7 +133,7 @@ public abstract class Person {
 	}
 	
 	   /**
-     * Gets the person's address.
+     * Gets the person's address
      *
      * @return the address
      */
@@ -141,7 +142,7 @@ public abstract class Person {
 	}
 	
 	/**
-     * Sets the person's address.
+     * Sets the person's address
      *
      * @param address the address to set
      */
@@ -150,7 +151,7 @@ public abstract class Person {
 	}
 	
 	/**
-     * Gets the person's birth city.
+     * Gets the person's birth city
      *
      * @return the birth city
      */
@@ -165,7 +166,7 @@ public abstract class Person {
     // == Methods ==
     
     /**
-     * Returns a string representation of the person's details.
+     * Returns a string representation of the person's details
      *
      * @return a formatted string with personal information
      */
