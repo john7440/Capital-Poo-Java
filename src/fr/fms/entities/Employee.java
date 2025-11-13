@@ -6,16 +6,16 @@ public class Employee extends Person {
 	private double salary;
 
 	// --Constructors---
-	public Employee(String firstName, String lastName, int age, String address,Capital birthCity, String entreprise, double salary) {
-		super(firstName, lastName, age, address, birthCity);
-		this.setEntreprise(entreprise);
-		this.setSalary(salary);
-	}
 	
 	public Employee(String firstName, String lastName, int age, String address, City birthCity, String entreprise, double salary) {
 		super(firstName, lastName, age, address, birthCity);
 		this.setEntreprise(entreprise);
 		this.setSalary(salary);
+	}
+	
+	public Employee(String firstName, String lastName, int age, String address, City birthCity, String entreprise) {
+		super(firstName, lastName, age, address, birthCity);
+		this.setEntreprise(entreprise);
 	}
 	
 	//----get/set----
@@ -36,7 +36,7 @@ public class Employee extends Person {
 	}
 	
 	// methods
-	
+	@ Override
 	public String toString() {
 		return "Nom: " + this.getLastName() + "\n" +
 			   "Prénom: " + this.getFirstName() + "\n" +
