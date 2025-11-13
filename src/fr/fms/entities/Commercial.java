@@ -24,7 +24,7 @@ public class Commercial extends Employee {
 
 	public void setEntrepriseRevenue(int entrepriseRevenue) {
 		if (entrepriseRevenue < 1000) {
-			System.out.println("Données saisies invalides! Valeur par défaut 1000");
+			System.out.println("Données saisies invalides pour le chiffre d'affaire! Valeur par défaut 1000");
 			this.entrepriseRevenue = 1000;
 		} else {
 			this.entrepriseRevenue = entrepriseRevenue;
@@ -37,8 +37,8 @@ public class Commercial extends Employee {
 	}
 
 	public void setPercentageRevenue(double percentageRevenue) {
-		if (percentageRevenue < 0) {
-			System.out.println("Données saisies invalides! Valeur par défaut 1.0");
+		if (percentageRevenue < 1) {
+			System.out.println("Données saisies invalides pour le Pourcentage de revenu! Valeur par défaut 1.0");
 			this.percentageRevenue = 1.0;
 		} else {
 			this.percentageRevenue = percentageRevenue;
@@ -59,6 +59,8 @@ public class Commercial extends Employee {
 			   "Ville de naissance: " + this.getBirthCity().cityName + "\n" +
 			   "Pays de naissance: " + this.getBirthCity().country + "\n" +
 			   "Entreprise: " + this.getEntreprise() + "\n" +
+			   "Chiffre d'affaire: " + this.getEntrepriseRevenue() + "\n" +
+			   "Pourcentage Rémunération: " + this.getPercentageRevenue() + "\n" +
 			   "Salaire/mensuel: " + this.getCalculatedSalary() + "\n";
 	}
 
