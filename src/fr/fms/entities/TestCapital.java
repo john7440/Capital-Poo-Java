@@ -1,5 +1,7 @@
 package fr.fms.entities;
 
+import java.util.ArrayList;
+
 public class TestCapital {
 
 	public static void main(String[] args) {
@@ -26,6 +28,31 @@ public class TestCapital {
 		
 		System.out.println(dupont);
 		System.out.println(duchnok);
+		System.out.println("---------------------\n");
+		
+		
+		// Question 3.6
+		ArrayList<Employee> employeeArray = new ArrayList<>();
+		employeeArray.add(bill);
+		employeeArray.add(elon);
+		employeeArray.add(dupont);
+		employeeArray.add(duchnok);
+		
+		for (Employee employee : employeeArray) {
+			System.out.println(employee);
+		}
+		System.out.println("---------------------\n");
+		
+		// Question 3.7
+		for (Employee employee : employeeArray) {
+			if (employee instanceof Commercial) {
+				System.out.println("Salaire mensuel de " + employee.getFirstName() + " " +  employee.getLastName() + " : " + ((Commercial) employee).getCalculatedSalary() );	
+			} else {
+				System.out.println("Salaire mensuel de " + employee.getFirstName() + " " + employee.getLastName() + " : " + employee.getSalary());
+			}
+			
+		}
+		
 	}
 
 }
