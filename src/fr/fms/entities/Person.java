@@ -3,7 +3,7 @@ package fr.fms.entities;
 /**
  * Represents a person with basic personal information such as name, age, address, and birth city
  */
-public class Person {
+public abstract class Person {
 	
 	// ==== Attributes===
 	// Personal informations
