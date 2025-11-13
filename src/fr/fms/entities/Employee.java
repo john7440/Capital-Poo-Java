@@ -32,10 +32,19 @@ public class Employee extends Person {
 	}
 
 	public void setSalary(double salary) {
-		this.salary = salary;
+		if (salary < 500) {
+			System.out.println("Donnée pour le salaire invalide! Valeur par défaut à 500 ");
+			this.salary = 500;
+		} else {
+			this.salary = salary;
+		}
+		
 	}
 	
 	// methods
+	
+	
+	
 	@ Override
 	public String toString() {
 		return "Nom: " + this.getLastName() + "\n" +
