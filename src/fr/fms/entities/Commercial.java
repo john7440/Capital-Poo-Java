@@ -3,14 +3,14 @@ package fr.fms.entities;
 public class Commercial extends Employee {
 	
 	private int entrepriseRevenue;
-	private float percentageRevenue;
+	private double percentageRevenue;
 	@SuppressWarnings("unused")
 	private double calculatedSalary;
 	
 	// constructor
 		
 	public Commercial(String firstName, String lastName, int age, String address, City birthCity, String entreprise, 
-					int entrepriseRevenue, float percentageRevenue) {
+					int entrepriseRevenue, double percentageRevenue) {
 		super(firstName, lastName, age, address, birthCity, entreprise);
 		this.setEntrepriseRevenue(entrepriseRevenue);
 		this.setPercentageRevenue(percentageRevenue);
@@ -23,15 +23,27 @@ public class Commercial extends Employee {
 	}
 
 	public void setEntrepriseRevenue(int entrepriseRevenue) {
-		this.entrepriseRevenue = entrepriseRevenue;
+		if (entrepriseRevenue < 1000) {
+			System.out.println("Données saisies invalides! Valeur par défaut 1000");
+			this.entrepriseRevenue = 1000;
+		} else {
+			this.entrepriseRevenue = entrepriseRevenue;
+		}
+		
 	}
 
-	public float getPercentageRevenue() {
+	public double getPercentageRevenue() {
 		return percentageRevenue;
 	}
 
-	public void setPercentageRevenue(float percentageRevenue) {
-		this.percentageRevenue = percentageRevenue;
+	public void setPercentageRevenue(double percentageRevenue) {
+		if (percentageRevenue < 0) {
+			System.out.println("Données saisies invalides! Valeur par défaut 1.0");
+			this.percentageRevenue = 1.0;
+		} else {
+			this.percentageRevenue = percentageRevenue;
+		}
+		
 	}
 
 	public double getCalculatedSalary() {
