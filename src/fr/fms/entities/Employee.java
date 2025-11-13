@@ -6,13 +6,13 @@ public class Employee extends Person {
 	private double salary;
 
 	// --Constructors---
-	public Employee(String firstName, String lastName, int age, String address,Capital birthCity, String entrepise, double salary) {
+	public Employee(String firstName, String lastName, int age, String address,Capital birthCity, String entreprise, double salary) {
 		super(firstName, lastName, age, address, birthCity);
 		this.setEntreprise(entreprise);
 		this.setSalary(salary);
 	}
 	
-	public Employee(String firstName, String lastName, int age, String address, City birthCity, String entrepise, double salary) {
+	public Employee(String firstName, String lastName, int age, String address, City birthCity, String entreprise, double salary) {
 		super(firstName, lastName, age, address, birthCity);
 		this.setEntreprise(entreprise);
 		this.setSalary(salary);
@@ -41,11 +41,11 @@ public class Employee extends Person {
 		return "Nom: " + this.getLastName() + "\n" +
 			   "Prénom: " + this.getFirstName() + "\n" +
 			   "Age: " + this.getAge() + " ans\n" +
-			   "Résident à: " + this.getAddress()+ " , " +
+			   "Résident à: " + this.getAddress()+ "\n" +
 			   "Ville de naissance: " + this.getBirthCity().cityName + "\n" +
 			   "Pays de naissance: " + this.getBirthCity().country + "\n" +
-			   "Entreprise: " + this.entreprise + "\n" +
-			   "Salaire/mensuel: " + this.salary + "\n";
+			   "Entreprise: " + this.getEntreprise() + "\n" +
+			   "Salaire/mensuel: " + this.getSalary() + "\n";
 	}
 
 }
