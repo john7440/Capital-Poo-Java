@@ -21,9 +21,11 @@ public class TestCapital {
 		System.out.println("---------------------\n");
 		
 		// Test Commercial
-		Commercial dupont = new Commercial("Robert", "Dupont", 50, "Rue des rosiers", new City("France", "Limoges", 133000), "FMS", 120000, (float) 5.0);
+		Commercial dupont = new Commercial("Robert", "Dupont", 50, "Rue des rosiers", new City("France", "Limoges", 133000), "FMS", 120000, 5.0);
+		Commercial duchnok = new Commercial("Jean-Hubert", "Duchnok", 63, "Rue de la Pierre en bois", new City("France", "Annecy", 900000), "KPMG", 12, 0);
 		
 		System.out.println(dupont);
+		System.out.println(duchnok);
 	}
 
 }
